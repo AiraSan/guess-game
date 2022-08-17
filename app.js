@@ -63,7 +63,7 @@ answer.addEventListener("click", () => {
 
 
 // Ad-count function
-let adTime = 0;
+let adTime = 5;
 function adCountdown(){
     adIcon.style.display = "none";
     document.querySelector('.ad-time').innerHTML = adTime;
