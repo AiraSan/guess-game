@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ခန့်မှန့်ဂိမ်း</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="main">
+        <h1>မင်္ဂလာပါ ကမ္ဘာ!</h1>
+        <p>ကြိုက်တာထည့်ပြီးခန့်မှန်းစမ်း...<br><b id="answer">အဖြေ</b> မှန်ရင်ဘေထည့်ပေးမယ်</p>
+        <input type="number" id="number" min="1" max="50" placeholder="၁ ကနေ ၅၀ အထိကြိုက်တာထည့်">
+        <input id="submitBtn" type="submit" value="ထည့်ပြီးရင်ဒါကိုနှိပ်">
+        <!-- <p id="error">အင်္ဂလိပ်နံပတ်ပဲထည့်ဟ မြန်မာလိုနဲ့ဆိုငါမရေးတတ်လို့</p> -->
+        <p>၃ ခါပဲခန့်မှန်းခိုင်းမယ်</p>
+        <h2 id="right">မင်းတော်တယ် မောင်ပြူး <br> အဘ ပြန်လာမှဘေထည့်ပေးမယ် ဟဲ"</h2>
+        <ul id="wrong">
+            <li>တစ်ခါ</li>
+            <li>နှစ်ခါ</li>
+            <li>သုံးခါ</li>
+        </ul>
+        <h3 class="lose">ဝမ်းနည်းပါတယ်</h3>
+        <h3 class="lose">နောက်တစ်ခါထပ်ကြိုးစားကြည့်ပါ</h3>
+        <input class="lose win" id="restartBtn" type="submit" value="ထပ်ဆော့မယ်">
+        <input class="lose win" id="closeBtn" type="submit" value="မဆော့တော့ဘူး">
+    </div>
+    
+    <!-- Ad div -->
+    <div class="ads-container hidden">
+        <div class="ads-display">
+            <div class="ad-count">
+                <i class='bx bx-x ad-icon'></i>
+                <p class="ad-time"></p>
+            </div>
+            <div class="ad-text">
+                <h4>Ad is running...</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ad decider -->
+    <div class="ads-container decider-container hidden">
+        <div class="ads-display decider-display">
+            <div class="ad-text decider-text">
+                <h2>ဝမ်းနည်းပါတယ် သုံးခါပြည့်သွားပါပြီ</h2>
+            </div>
+            <div class="decider-button">
+                <input type="submit" id="surrender" value="အရှုံးပေးမယ်">
+                <input type="submit" id="chance" value="ထပ်ခန့်မှန်းမယ်">
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    text-align: center;
+}
+li{
+    font-weight: bold;
+}
+p{
+    margin: 10px;
+}
+.main input,.decider-container input{
+    margin: 10px;
+    display: block;
+    width: 300px;
+    font-size: 18px;
+    padding: 14px 14px;
+    border-radius: 18px;
+    border: 1px solid #0f0f0f;
+    text-align: center;
+}
+.decider-container input{
+    width: 250px !important;
+}
+ul{
+    list-style-type: none;
+}
+li,.lose,.win{
+    visibility: hidden;
+}
+.active{
+    visibility: visible;
+}
+#right{
+    display: none;
+}
+
+/* Ad container */
+.ads-container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ads-display{
+    width: 80%;
+    height: 80vh;
+    padding: 10px;
+    background-color: #000000b4;
+    border-radius: 10px;
+    position: relative;
+}
+.decider-display{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ad-count{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #00000088;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.ad-count .ad-icon {
+    display: none;
+    font-size: 25px;
+}
+.ad-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.decider-text{
+    height: 30% !important;
+}
+.ad-text h4, h2{
+    color: #fff;
+    background-color: #00000050;
+    padding: 10px;
+    border-radius: 10px;
+}
+h2 {
+    padding: 14px;
+    background-color: #00000090;
+}
+
+.hidden{
+    display: none;
+}
