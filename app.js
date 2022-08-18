@@ -36,7 +36,10 @@ submit.addEventListener("click", (e) => {
     lists[index].classList.add("active");
     index++;
     if (index === 3) {
-      deciderContainer.classList.remove("hidden");
+      deciderContainer.classList.contains("hidden") ? deciderContainer.classList.remove("hidden") : deciderContainer.classList.add("hidden");
+      // deciderContainer.classList.add("hidden");
+      adsContainer.classList.contains("hidden") ? adsContainer.classList.add("hidden") : adsContainer.classList.remove("hidden");
+      index = 0;
     }
   }
   input.value = "";
@@ -63,22 +66,24 @@ answer.addEventListener("click", () => {
 
 
 // Ad-count function
-let adTime = 5;
+let adTime = 5 ;
 function adCountdown(){
+    document.querySelector('.ad-time').classList.remove("hidden")
     adIcon.style.display = "none";
     document.querySelector('.ad-time').innerHTML = adTime;
     adTime--;
     if(adTime < 0)
     {
+      adTime = 5;
       mystop();
-      document.querySelector('.ad-time').style.display = "none";
+      document.querySelector('.ad-time').classList.add("hidden");
       adIcon.style.display = "block";
       adCount.classList.add("close-ad");
       let closeAd = document.querySelector('.close-ad');
       closeAd.addEventListener("click", ()=>{
-        document.querySelector(".ads-container").style.display = "none";
+        document.querySelector(".ads-container").classList.add("hidden");
         lists.forEach(el=>el.classList.remove("active"));
-        index = 0;
+        adCount.classList.remove("close-ad");
       })
     };
 };
@@ -92,9 +97,12 @@ function mystop(){
 
 // For Decider 
 chanceBtn.addEventListener("click", ()=>{
-  deciderContainer.classList.add("hidden");
-  adsContainer.classList.remove("hidden");
+  deciderContainer.classList.contains("hidden") ? deciderContainer.classList.add("hidden") : deciderContainer.classList.add("hidden");
+  // deciderContainer.classList.add("hidden");
+  adsContainer.classList.contains("hidden") ? adsContainer.classList.remove("hidden") : adsContainer.classList.add("hidden");
+  // adsContainer.classList.remove("hidden");
   intervalID = setInterval(adCountdown, 1000);
+  adIcon.style.display = "none";
 })
 
 // For Surrender
